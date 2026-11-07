@@ -257,6 +257,57 @@ h2 a:hover {
 }
 
 /* ==========================================
+   LOCKER CODES WITH SCREENSHOTS
+========================================== */
+
+/* Put locker text and image side by side */
+
+.leon-page .locker-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Allow text to fit alongside image */
+
+.leon-page .locker-row > div {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Locker screenshots */
+
+.leon-page .locker-row img {
+  display: block;
+  width: 300px;
+  max-width: 45%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+/* Leon's Desk - Two screenshots side by side */
+
+.leon-page .desk-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.leon-page .desk-code {
+  flex: 1;
+  min-width: 0;
+}
+
+.leon-page .desk-code img {
+  display: block;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+/* ==========================================
    7. PUZZLE SOLUTIONS
 ========================================== */
 
@@ -325,6 +376,16 @@ h2 a:hover {
 .leon-page .run-box p {
   color: #ccc;
   margin: 10px 0 20px;
+}
+/* Statue puzzle screenshots */
+
+.leon-page .statue-image {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 10px 0 25px;
 }
 
 /* ==========================================
@@ -517,6 +578,21 @@ h2 a:hover {
     padding: 15px;
   }
 
+  /* Stack locker screenshots under codes */
+
+  .leon-page .locker-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Locker screenshots on mobile */
+
+  .leon-page .locker-row img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
   /* Stack puzzle boxes */
 
   .leon-page .run-container {
@@ -578,6 +654,10 @@ h2 a:hover {
   }
 }
 
+/* ==========================================
+   15. PAGE FOOTER
+========================================== */
+
 .page-footer {
   display: flex;
   justify-content: center;
@@ -599,19 +679,10 @@ h2 a:hover {
   background-color: #dc143c;
 }
 
-.home-button {
-  display: inline-block;
-  margin: 20px;
-  padding: 10px 20px;
-  background-color: #252525;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-}
+/* ==========================================
+   16. HOME BUTTON
+========================================== */
 
-.home-button:hover {
-  background-color: #dc143c;
-}
 .home-button,
 .home-button:visited {
   display: inline-block;
@@ -626,6 +697,11 @@ h2 a:hover {
 .home-button:hover {
   background-color: #dc143c;
 }
+
+/* ==========================================
+   17. HOMEPAGE BANNER
+========================================== */
+
 .home-banner {
   display: block;
   width: 100%;
