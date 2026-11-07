@@ -505,6 +505,17 @@ h2 a:hover {
   color: #e7194c;
   margin-right: 10px;
 }
+.key-images {
+  display: flex;
+  gap: 15px;
+}
+
+.key-images img {
+  width: 50%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
 
 /* Future key images */
 
@@ -516,7 +527,11 @@ h2 a:hover {
   object-fit: contain;
   margin: 15px auto;
 }
-
+.key-image {
+  width: 100%;
+  max-width: none;
+  height: auto;
+}
 /* ==========================================
    12. GUIDE FOOTER
 ========================================== */
