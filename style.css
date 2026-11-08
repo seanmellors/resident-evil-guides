@@ -1,514 +1,723 @@
-/* ==========================================
-   RESIDENT EVIL 2 REMAKE - STYLESHEET
-========================================== */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap");
 
 /* ==========================================
-   1. GOOGLE FONTS
+   1. COLOURS AND GENERAL SETTINGS
 ========================================== */
 
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap");
-
-/* ==========================================
-   2. GENERAL PAGE STYLING
-========================================== */
+:root {
+  --background: #090909;
+  --surface: #171717;
+  --surface-light: #242424;
+  --border: #393939;
+  --red: #e31b36;
+  --red-dark: #a70e24;
+  --text: #f5f5f5;
+  --muted: #c1c1c1;
+  --font-heading: "Bebas Neue", sans-serif;
+  --font-body: "Roboto", sans-serif;
+}
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 20px;
+}
+
 body {
   margin: 0;
-  background-color: #000;
-  color: #fff;
-  font-family: "Roboto", sans-serif;
+  min-width: 320px;
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.2;
+  overflow-wrap: break-word;
+}
+
+h1,
+h2 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  letter-spacing: 0.7px;
 }
 
 h1 {
-  color: red;
+  margin: 25px 0;
+  color: var(--red);
+  font-size: clamp(2.6rem, 6vw, 4rem);
   text-align: center;
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 48px;
 }
 
 h2 {
-  margin-top: 40px;
-  margin-bottom: 20px;
+  margin: 35px 0 20px;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
 }
 
 h3 {
-  color: red;
-  text-align: center;
+  margin: 0 0 12px;
+  font-size: 1.25rem;
+}
+
+h4 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+}
+
+h5 {
+  margin: 18px 0 8px;
+  font-size: 1rem;
 }
 
 p {
   max-width: 900px;
-  margin: 20px auto;
-  line-height: 1.6;
-  color: #ccc;
+  margin: 16px auto;
+  color: var(--muted);
+  line-height: 1.75;
 }
 
-h2 a,
-h2 a:visited {
-  color: red;
-  text-decoration: none;
+strong {
+  color: var(--text);
 }
 
-h2 a:hover {
-  color: darkred;
+a:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: var(--red);
+  color: #fff;
 }
 
 /* ==========================================
-   3. HOMEPAGE - CHARACTER SELECTION
+   2. HOMEPAGE
 ========================================== */
+
+.home-banner {
+  display: block;
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  height: auto;
+  margin: 25px auto 35px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+body:not(.leon-page):not(.claire-page):not(.files-page):not(.raccoon-page)
+  > main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+body:not(.leon-page):not(.claire-page):not(.files-page):not(.raccoon-page) > p {
+  max-width: 850px;
+  padding: 0 20px;
+}
+
+/* Homepage information sections */
+
+.home-info {
+  width: 100%;
+  max-width: 850px;
+  margin: 55px auto;
+  padding: 0 20px;
+}
+
+.home-info h2 {
+  margin: 35px 0 22px;
+  color: var(--text);
+  text-align: center;
+}
+
+.home-info p {
+  max-width: 100%;
+  margin: 0 0 18px;
+  color: var(--muted);
+  line-height: 1.8;
+  text-align: left;
+}
+
+/* Guide selection heading */
+
+.character-select {
+  margin: 45px auto 30px;
+  color: var(--text);
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  text-align: center;
+}
+
+/* Guide card grid */
 
 .characters {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 450px));
   justify-content: center;
   gap: 30px;
-  padding-bottom: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 15px 20px 60px;
 }
 
 .character {
-  text-align: center;
   min-width: 0;
+  text-align: center;
 }
 
-.characters h2 {
-  color: #dc143c;
+.character a {
+  display: block;
+  overflow: hidden;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.character a:hover {
+  transform: translateY(-5px);
+  border-color: var(--red);
+  box-shadow: 0 10px 30px rgb(0 0 0 / 45%);
+}
+
+.character h2 {
+  margin: 0;
+  padding: 14px 10px;
+  color: var(--red);
+  font-family: var(--font-heading);
+  font-size: 2rem;
   text-align: center;
 }
 
 .characters img {
   display: block;
-  width: 450px;
-  height: 300px;
-  max-width: 100%;
+  width: 100%;
+  height: 280px;
   object-fit: contain;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
 }
 
-.characters a img:hover {
-  transform: scale(1.05);
+.character a:hover img {
+  transform: scale(1.035);
 }
 
 .characters .raccoon-image {
   padding: 20px;
 }
 
-.character-select {
-  color: white;
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 40px;
+/* ==========================================
+   3. HOME BUTTON
+========================================== */
+
+.home-button,
+.home-button:visited {
+  display: inline-block;
+  margin: 20px;
+  padding: 10px 22px;
+  background: var(--surface-light);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.home-button:hover {
+  background: var(--red-dark);
+  border-color: var(--red);
 }
 
 /* ==========================================
-   4. LEON AND CLAIRE - MAIN LAYOUT
+   4. LEON AND CLAIRE PAGE LAYOUT
 ========================================== */
 
 .leon-page .leon-guide {
-  max-width: 1000px;
+  width: 100%;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px 25px 40px;
 }
 
-.leon-page .leon-header {
-  text-align: center;
+.leon-header {
   margin-bottom: 30px;
+  text-align: center;
+}
+
+.leon-header h1 {
+  margin: 10px 0 25px;
 }
 
 .character-banner {
   display: block;
   width: 100%;
   height: auto;
-  margin: 20px 0;
-  border-radius: 10px;
+  margin: 0 auto 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
 }
 
-.leon-page .guide-subtitle {
-  color: #aaa;
+.guide-subtitle {
+  margin: 15px auto;
+  color: var(--muted);
+  font-size: 1.05rem;
   text-align: center;
 }
 
-.leon-page .leon-intro {
-  margin-bottom: 40px;
+.leon-intro {
+  max-width: 950px;
+  margin: 0 auto 40px;
+}
+
+.leon-intro p {
+  font-size: 1.05rem;
 }
 
 /* ==========================================
-   5. QUICK LINKS
+   5. LEON AND CLAIRE QUICK LINKS
 ========================================== */
 
-.leon-page .leon-nav {
+.leon-nav {
+  margin: 30px 0 45px;
+  padding: 25px 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
   text-align: center;
-  margin-bottom: 40px;
 }
 
-.leon-page .leon-nav h2 {
-  color: #dc143c;
+.leon-nav h2 {
+  margin: 0 0 20px;
+  color: var(--red);
 }
 
-.leon-page .leon-nav-links {
+.leon-nav-links {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
+  justify-content: center;
+  gap: 12px;
 }
 
-.leon-page .leon-nav-links a {
-  background-color: #252525;
-  color: white;
+.leon-nav-links a,
+.files-nav a {
+  display: inline-block;
+  padding: 11px 18px;
+  background: var(--surface-light);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  font-size: 0.95rem;
+  font-weight: 700;
   text-decoration: none;
-  padding: 12px 18px;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
 }
 
-.leon-page .leon-nav-links a:hover {
-  background-color: #dc143c;
+.leon-nav-links a:hover,
+.files-nav a:hover {
+  background: var(--red-dark);
+  border-color: var(--red);
 }
 
 /* ==========================================
    6. GUIDE SECTIONS
 ========================================== */
 
-.leon-page .guide-section {
-  background-color: #171717;
-  padding: 25px;
+.leon-page .guide-section,
+.raccoon-page .guide-section {
   margin: 0 0 35px;
-  border-radius: 8px;
+  padding: 30px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
 }
 
-.leon-page .guide-section h2 {
-  color: #dc143c;
+.leon-page .guide-section > h2,
+.raccoon-page .guide-section > h2 {
+  margin: 0 0 25px;
+  color: var(--red);
   text-align: center;
-  margin-top: 0;
-  margin-bottom: 30px;
 }
 
-.leon-page .guide-entry {
-  border-bottom: 1px solid #353535;
-  padding: 15px 0;
+.guide-entry {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
 }
 
-.leon-page .guide-entry:last-child {
+.guide-entry:last-child {
   border-bottom: none;
 }
 
-.leon-page .guide-entry h3 {
-  color: white;
+.guide-entry h3 {
+  margin: 0 0 12px;
+  color: var(--text);
   text-align: left;
-  margin-bottom: 10px;
 }
 
-.leon-page .guide-entry p {
-  margin: 8px 0;
+.guide-entry p {
+  margin: 7px 0;
 }
 
-/* Locker codes with screenshots */
+/* ==========================================
+   7. LOCKER SCREENSHOTS
+========================================== */
 
-.leon-page .locker-row {
+.locker-row {
   display: flex;
-  flex-direction: row;
+  align-items: flex-start;
   justify-content: space-between;
-  align-items: center;
-  gap: 20px;
+  gap: 25px;
 }
 
-.leon-page .locker-row > div {
+.locker-row > div {
   flex: 1;
   min-width: 0;
 }
 
-.leon-page .locker-row img {
-  display: block;
-  width: 300px;
+.locker-row img {
+  width: 320px;
   max-width: 45%;
   height: auto;
-  border-radius: 8px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
   object-fit: contain;
 }
 
-/* Leon's desk screenshots */
+/* ==========================================
+   8. LEON'S DESK
+========================================== */
 
-.leon-page .desk-container {
-  display: flex;
+.desk-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
   margin-top: 20px;
 }
 
-.leon-page .desk-code {
-  flex: 1;
+.desk-code {
   min-width: 0;
 }
 
-.leon-page .desk-code img {
-  display: block;
+.desk-code p {
+  margin-bottom: 12px;
+}
+
+.desk-code img {
   width: 100%;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 8px;
+  height: auto;
+  max-height: 420px;
+  object-fit: contain;
+  border: 1px solid var(--border);
+  border-radius: 9px;
 }
 
 /* ==========================================
-   7. PUZZLE SOLUTIONS
+   9. PUZZLE SOLUTIONS
 ========================================== */
 
-.leon-page .puzzle-entry {
-  margin-bottom: 35px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #353535;
+.puzzle-entry {
+  margin-bottom: 30px;
+  padding: 0 0 30px;
+  border-bottom: 1px solid var(--border);
 }
 
-.leon-page .puzzle-entry:last-child {
-  border-bottom: none;
+.puzzle-entry:last-child {
   margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
 }
 
-.leon-page .puzzle-entry > h3 {
-  color: white;
+.puzzle-entry > h3 {
+  margin: 0 0 20px;
+  color: var(--text);
   text-align: left;
 }
 
 /* ==========================================
-   8. FIRST RUN AND SECOND RUN
+   10. FIRST AND SECOND RUN BOXES
 ========================================== */
 
-.leon-page .run-container {
-  display: flex;
-  justify-content: center;
+.run-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
-  margin: 20px auto 30px;
+  margin: 20px 0;
 }
 
-.leon-page .run-box {
-  flex: 1;
+.run-box {
   min-width: 0;
-  background-color: #292929;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 22px;
+  background: var(--surface-light);
+  border: 1px solid var(--border);
+  border-radius: 10px;
 }
 
-.leon-page .run-box h3 {
-  color: white;
+.run-box h4 {
+  margin: 0 0 20px;
+  color: var(--text);
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
   text-align: center;
-  margin-top: 0;
 }
 
-.leon-page .run-box h4 {
-  color: #dc143c;
-  margin-bottom: 10px;
+.run-box h5 {
+  margin: 20px 0 8px;
+  color: var(--red);
+  font-size: 1.05rem;
 }
 
-.leon-page .run-box p {
-  color: #ccc;
-  margin: 10px 0 20px;
+.run-box p {
+  margin: 8px 0 20px;
 }
 
-.leon-page .statue-image {
+.statue-image {
   display: block;
   width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 8px;
+  height: auto;
+  max-height: 300px;
   margin: 10px 0 25px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  object-fit: contain;
 }
 
 /* ==========================================
-   9. KEYS AND KEYCARDS - MAIN SECTION
+   11. KEYS AND KEYCARDS
 ========================================== */
 
 .keys-guide {
-  background-color: #101010;
-  color: white;
   width: 100%;
-  max-width: 100%;
-  padding: 18px;
-  margin: 30px auto;
-  border-radius: 16px;
+  margin: 35px auto;
+  padding: 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
 }
 
 .keys-header {
+  padding: 10px 0 25px;
+  border-bottom: 1px solid var(--border);
   text-align: center;
-  padding: 25px 0 40px;
-  border-bottom: 1px solid #383838;
 }
 
 .keys-header h2 {
-  color: #e7194c;
-  font-size: 48px;
   margin: 0;
-  text-transform: uppercase;
+  color: var(--red);
+  font-size: clamp(2rem, 4vw, 3rem);
 }
 
-.keys-header p {
-  color: #aaa;
-  font-size: 16px;
-  margin-top: 8px;
-}
-
-/* ==========================================
-   10. KEY SECTIONS AND HEADINGS
-========================================== */
-
-.keys-section h2,
-.keycards-section h2,
-.other-keys-section h2 {
-  color: white;
-  font-size: 30px;
-  margin: 30px 0 18px;
-  text-align: left;
-}
-
+.keys-section,
 .keycards-section,
 .other-keys-section {
   margin-top: 30px;
 }
 
-/* ==========================================
-   11. KEY CARDS
-========================================== */
+.keys-section > h3,
+.keycards-section > h3,
+.other-keys-section > h3 {
+  margin: 0 0 20px;
+  color: var(--text);
+  font-size: 1.6rem;
+  text-align: left;
+}
 
 .keys-container {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  align-items: start;
+  gap: 16px;
 }
 
 .key-card {
-  background-color: #222;
-  border: 1px solid #383838;
-  border-radius: 12px;
-  padding: 18px;
+  min-width: 0;
+  padding: 22px;
+  background: var(--surface-light);
+  border: 1px solid var(--border);
+  border-radius: 10px;
 }
 
-.key-card h3 {
-  color: white;
-  font-size: 20px;
-  margin: 0 0 14px;
+.key-card h4 {
+  margin: 0 0 12px;
+  color: var(--text);
+  font-size: 1.2rem;
   text-align: left;
 }
 
 .key-card p {
-  color: #ccc;
-  font-size: 18px;
   margin: 0 0 12px;
-  line-height: 1.4;
-  text-align: left;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .key-card .key-description {
-  color: #999;
-  font-size: 16px;
   margin-bottom: 0;
+  color: #aaa;
+  font-size: 0.95rem;
 }
 
 .key-icon {
-  color: #e7194c;
-  margin-right: 10px;
+  margin-right: 8px;
+  color: var(--red);
 }
 
 .key-images {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 15px;
+  margin-top: 20px;
 }
 
 .key-images img {
-  width: 50%;
-  height: 200px;
-  object-fit: cover;
+  width: 100%;
+  height: 190px;
+  border: 1px solid var(--border);
   border-radius: 8px;
+  object-fit: contain;
 }
 
 .key-image {
   display: block;
   width: 100%;
-  max-width: none;
   height: auto;
+  max-height: 350px;
+  margin: 20px auto 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
   object-fit: contain;
-  margin: 15px auto;
 }
 
 /* ==========================================
-   12. FILES AND DOCUMENTS PAGE
+   12. MR. RACCOON PAGE
+========================================== */
+
+.raccoon-guide {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 10px 25px 40px;
+}
+
+.raccoon-header {
+  margin: 0 0 35px;
+  text-align: center;
+}
+
+.raccoon-header h1 {
+  margin: 10px 0 15px;
+}
+
+.raccoon-intro {
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+.raccoon-intro h2 {
+  color: var(--red);
+  text-align: center;
+}
+
+.raccoon-locations {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.raccoon-locations .guide-entry {
+  padding: 20px;
+  background: var(--surface-light);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.raccoon-locations img {
+  width: 100%;
+  height: auto;
+  margin-top: 15px;
+  border-radius: 8px;
+}
+
+/* ==========================================
+   13. FILES AND DOCUMENTS PAGE
 ========================================== */
 
 .files-header {
+  width: 100%;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 40px 20px 20px;
+  padding: 15px 25px 25px;
   text-align: center;
 }
 
 .files-header h1 {
-  color: red;
-  font-family: "Bebas Neue", sans-serif;
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  margin-bottom: 15px;
+  margin: 10px 0 20px;
 }
 
 .files-header p {
-  color: #ccc;
-  max-width: 750px;
+  max-width: 800px;
   margin: 0 auto 30px;
-  line-height: 1.7;
 }
-
-/* Files navigation */
 
 .files-nav {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 12px;
 }
 
-.files-nav a,
-.files-footer a {
-  display: inline-block;
-  padding: 12px 18px;
-  background: #191919;
-  color: white;
-  text-decoration: none;
-  border: 1px solid #555;
-  border-radius: 5px;
-  transition: 0.2s ease;
-}
-
-.files-nav a:hover,
-.files-footer a:hover {
-  background: #8b0000;
-  border-color: red;
-}
-
-/* Files guide */
-
 .files-guide {
+  width: 100%;
   max-width: 1100px;
-  margin: 30px auto;
-  padding: 0 20px;
+  margin: 20px auto;
+  padding: 0 25px;
 }
 
 .files-page .guide-section {
-  margin-bottom: 55px;
-  scroll-margin-top: 20px;
+  margin-bottom: 45px;
+  scroll-margin-top: 25px;
 }
 
 .files-page .guide-section h2 {
-  color: #e00000;
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 2rem;
-  border-bottom: 2px solid #8b0000;
-  padding-bottom: 10px;
-  margin-bottom: 15px;
+  margin: 0 0 20px;
+  padding-bottom: 12px;
+  color: var(--red);
+  border-bottom: 2px solid var(--red-dark);
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
 }
 
 .files-page .guide-section > p {
-  color: #bbb;
-  margin-bottom: 25px;
-  line-height: 1.6;
+  margin: 0 0 25px;
 }
-
-/* File cards */
 
 .file-grid {
   display: grid;
@@ -517,250 +726,436 @@ h2 a:hover {
 }
 
 .file-entry {
-  background: #151515;
-  border: 1px solid #383838;
-  border-left: 4px solid #9b0000;
-  border-radius: 6px;
-  padding: 20px;
+  min-width: 0;
+  padding: 22px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--red-dark);
+  border-radius: 9px;
 }
 
 .file-entry h3 {
-  color: #fff;
-  font-size: 1.15rem;
   margin: 0 0 15px;
+  color: var(--text);
+  font-size: 1.15rem;
+  text-align: left;
 }
 
 .file-entry p {
-  color: #bbb;
-  line-height: 1.6;
-  margin: 8px 0;
+  margin: 7px 0;
+  color: var(--muted);
 }
 
 .file-entry strong {
-  color: #eee;
-}
-
-/* Older files-page navigation footer */
-
-.files-footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  padding: 30px 20px 50px;
-  border-top: 1px solid #333;
+  color: var(--text);
 }
 
 /* ==========================================
-   13. SHARED PAGE FOOTER
+   14. SHARED WEBSITE FOOTER
 ========================================== */
 
 .page-footer {
-  display: block;
   width: 100%;
-  margin-top: 40px;
-  padding: 35px 20px;
-  border-top: 1px solid #333;
+  margin-top: 50px;
+  padding: 40px 25px 30px;
+  background: #111;
+  border-top: 1px solid var(--border);
   text-align: center;
 }
 
 .page-footer .footer-brand {
-  margin: 0 auto 20px;
-  color: #fff;
-  font-size: 18px;
+  margin: 0 auto 22px;
+  color: var(--text);
+  font-size: 1.1rem;
   font-weight: 700;
 }
 
-.page-footer .footer-nav {
+.footer-nav {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 25px;
+  justify-content: center;
+  gap: 10px;
+  max-width: 1100px;
+  margin: 0 auto 30px;
 }
 
-.page-footer a {
+.footer-nav a {
   display: inline-block;
-  padding: 12px 20px;
-  border-radius: 5px;
-  background-color: #252525;
-  color: #fff;
+  padding: 10px 15px;
+  background: var(--surface-light);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  font-size: 0.9rem;
   text-decoration: none;
-  transition: background-color 0.3s;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
 }
 
-.page-footer a:hover {
-  background-color: #dc143c;
+.footer-nav a:hover {
+  background: var(--red-dark);
+  border-color: var(--red);
 }
 
-.page-footer a:focus-visible {
-  outline: 2px solid #fff;
-  outline-offset: 4px;
+.footer-nav a[aria-current="page"] {
+  border-color: var(--red);
+  color: #fff;
 }
 
 .page-footer p {
   width: 100%;
   max-width: 900px;
   margin: 12px auto;
-  color: #ccc;
-  font-size: 14px;
-  line-height: 1.6;
+  color: #aaa;
+  font-size: 0.85rem;
+  line-height: 1.7;
 }
 
 .page-footer .footer-copyright {
-  margin-top: 20px;
-  font-size: 12px;
+  margin-top: 25px;
+  color: #888;
+  font-size: 0.75rem;
 }
 
 /* ==========================================
-   14. HOME BUTTON
-========================================== */
-
-.home-button,
-.home-button:visited {
-  display: inline-block;
-  margin: 20px;
-  padding: 10px 20px;
-  background-color: #252525;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.home-button:hover {
-  background-color: #dc143c;
-}
-
-/* ==========================================
-   15. HOMEPAGE BANNER
-========================================== */
-
-.home-banner {
-  display: block;
-  width: 100%;
-  max-width: 1200px;
-  height: auto;
-  margin: 25px auto;
-  border-radius: 8px;
-}
-
-/* ==========================================
-   16. TABLET AND SMALLER SCREENS
+   15. TABLET LAYOUT
 ========================================== */
 
 @media (max-width: 900px) {
   .characters {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    padding: 0 20px 50px;
+    gap: 20px;
   }
 
   .characters img {
-    width: 100%;
-    height: 235px;
-  }
-}
-
-/* ==========================================
-   17. FILES PAGE - MOBILE LAYOUT
-========================================== */
-
-@media (max-width: 650px) {
-  .files-header {
-    padding-top: 25px;
+    height: 230px;
   }
 
-  .file-grid {
-    grid-template-columns: 1fr;
+  .leon-page .leon-guide,
+  .raccoon-guide,
+  .files-guide {
+    padding-right: 20px;
+    padding-left: 20px;
   }
 
-  .file-entry {
-    padding: 16px;
+  .keys-guide {
+    padding: 22px;
   }
 
-  .files-nav a {
-    font-size: 0.9rem;
-    padding: 10px 12px;
-  }
-
-  .files-footer a {
-    flex: 1 1 40%;
-    text-align: center;
-  }
-}
-
-/* ==========================================
-   18. MOBILE LAYOUT
-========================================== */
-
-@media (max-width: 600px) {
-  .leon-page .leon-guide {
-    padding: 10px;
-  }
-
-  .leon-page .guide-section {
-    padding: 15px;
-  }
-
-  /* Stack locker text and screenshots */
-
-  .leon-page .locker-row {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .leon-page .locker-row img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* Stack first-run and second-run boxes */
-
-  .leon-page .run-container {
-    flex-direction: column;
-  }
-
-  .leon-page .run-box {
-    padding: 15px;
-  }
-
-  /* Stack key cards */
-
-  .keys-container {
-    grid-template-columns: 1fr;
-  }
-
-  .keys-header h2 {
-    font-size: 32px;
-  }
-
-  .key-card {
-    padding: 15px;
-  }
-
-  /* Older guide footer */
-
-  .leon-page .leon-footer {
-    flex-wrap: wrap;
+  .run-container {
     gap: 15px;
   }
 
-  /* One homepage column */
+  .run-box {
+    padding: 18px;
+  }
+
+  .file-grid {
+    gap: 14px;
+  }
+
+  .home-info {
+    max-width: 800px;
+  }
+}
+
+/* ==========================================
+   16. MOBILE LAYOUT
+========================================== */
+
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: clamp(2.3rem, 9vw, 3rem);
+  }
+
+  h2 {
+    font-size: 1.9rem;
+  }
+
+  .home-button {
+    margin: 12px 15px;
+    padding: 9px 16px;
+  }
+
+  /* Homepage */
+
+  .home-banner {
+    width: calc(100% - 24px);
+    margin: 15px auto 25px;
+    border-radius: 8px;
+  }
+
+  .character-select {
+    margin: 30px auto 20px;
+  }
 
   .characters {
     grid-template-columns: 1fr;
     justify-items: center;
     gap: 20px;
-    padding: 0 15px 40px;
+    padding: 10px 15px 40px;
   }
 
   .character {
     width: 100%;
-    max-width: 350px;
+    max-width: 420px;
   }
 
   .characters img {
     width: 100%;
-    height: 235px;
+    height: 230px;
+  }
+
+  .character h2 {
+    padding: 12px 8px;
+    font-size: 1.8rem;
+  }
+
+  .home-info {
+    margin: 35px auto;
+    padding: 0 15px;
+  }
+
+  .home-info h2 {
+    margin: 30px 0 18px;
+  }
+
+  .home-info p {
+    line-height: 1.75;
+  }
+
+  /* Leon and Claire */
+
+  .leon-page .leon-guide {
+    padding: 5px 15px 30px;
+  }
+
+  .leon-header h1 {
+    margin-top: 10px;
+  }
+
+  .character-banner {
+    border-radius: 8px;
+  }
+
+  .leon-intro {
+    margin-bottom: 30px;
+  }
+
+  .leon-nav {
+    padding: 20px 12px;
+    margin-bottom: 30px;
+  }
+
+  .leon-nav-links {
+    gap: 8px;
+  }
+
+  .leon-nav-links a {
+    flex: 1 1 135px;
+    padding: 10px 8px;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  .leon-page .guide-section,
+  .raccoon-page .guide-section {
+    padding: 20px 15px;
+    margin-bottom: 25px;
+  }
+
+  .guide-entry {
+    padding: 18px 0;
+  }
+
+  /* Locker images */
+
+  .locker-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .locker-row img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Desk screenshots */
+
+  .desk-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .desk-code img {
+    max-height: none;
+  }
+
+  /* Puzzle runs */
+
+  .run-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .run-box {
+    padding: 18px;
+  }
+
+  .statue-image {
+    max-height: none;
+  }
+
+  /* Keys and keycards */
+
+  .keys-guide {
+    padding: 18px 14px;
+    margin: 25px auto;
+  }
+
+  .keys-header {
+    padding-bottom: 20px;
+  }
+
+  .keys-header h2 {
+    font-size: 2rem;
+  }
+
+  .keys-section > h3,
+  .keycards-section > h3,
+  .other-keys-section > h3 {
+    font-size: 1.35rem;
+  }
+
+  .keys-container {
+    grid-template-columns: 1fr;
+  }
+
+  .key-card {
+    padding: 18px;
+  }
+
+  .key-images {
+    grid-template-columns: 1fr;
+  }
+
+  .key-images img {
+    height: auto;
+    max-height: 300px;
+  }
+
+  /* Mr. Raccoon */
+
+  .raccoon-guide {
+    padding: 5px 15px 30px;
+  }
+
+  .raccoon-locations {
+    grid-template-columns: 1fr;
+  }
+
+  /* Files and documents */
+
+  .files-header {
+    padding: 5px 15px 20px;
+  }
+
+  .files-guide {
+    padding: 0 15px;
+  }
+
+  .files-nav {
+    gap: 8px;
+  }
+
+  .files-nav a {
+    flex: 1 1 130px;
+    padding: 10px 8px;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  .file-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .file-entry {
+    padding: 18px;
+  }
+
+  .files-page .guide-section {
+    margin-bottom: 35px;
+  }
+
+  /* Footer */
+
+  .page-footer {
+    margin-top: 35px;
+    padding: 30px 15px;
+  }
+
+  .footer-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .footer-nav a {
+    padding: 10px 8px;
+    font-size: 0.82rem;
+    text-align: center;
+  }
+
+  .page-footer p {
+    font-size: 0.8rem;
+  }
+}
+
+/* ==========================================
+   17. SMALL PHONES
+========================================== */
+
+@media (max-width: 380px) {
+  .characters img {
+    height: 200px;
+  }
+
+  .leon-nav-links a,
+  .files-nav a {
+    flex-basis: 100%;
+  }
+
+  .footer-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .key-card,
+  .file-entry,
+  .run-box {
+    padding: 15px;
+  }
+}
+
+/* ==========================================
+   18. REDUCED MOTION ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
   }
 }
