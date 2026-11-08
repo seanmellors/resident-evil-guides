@@ -23,16 +23,12 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-/* Main heading */
-
 h1 {
   color: red;
   text-align: center;
   font-family: "Bebas Neue", sans-serif;
   font-size: 48px;
 }
-
-/* Other headings */
 
 h2 {
   margin-top: 40px;
@@ -44,16 +40,12 @@ h3 {
   text-align: center;
 }
 
-/* Paragraphs */
-
 p {
   max-width: 900px;
   margin: 20px auto;
   line-height: 1.6;
   color: #ccc;
 }
-
-/* Heading links */
 
 h2 a,
 h2 a:visited {
@@ -69,8 +61,6 @@ h2 a:hover {
    3. HOMEPAGE - CHARACTER SELECTION
 ========================================== */
 
-/* Two-column homepage layout */
-
 .characters {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 450px));
@@ -79,21 +69,15 @@ h2 a:hover {
   padding-bottom: 60px;
 }
 
-/* Individual character */
-
 .character {
   text-align: center;
   min-width: 0;
 }
 
-/* Character headings */
-
 .characters h2 {
   color: #dc143c;
   text-align: center;
 }
-
-/* Character images */
 
 .characters img {
   display: block;
@@ -104,19 +88,13 @@ h2 a:hover {
   transition: transform 0.3s;
 }
 
-/* Image hover effect */
-
 .characters a img:hover {
   transform: scale(1.05);
 }
 
-/* Mr Raccoon image */
-
 .characters .raccoon-image {
   padding: 20px;
 }
-
-/* Character selection heading */
 
 .character-select {
   color: white;
@@ -128,22 +106,16 @@ h2 a:hover {
    4. LEON AND CLAIRE - MAIN LAYOUT
 ========================================== */
 
-/* Both character guides use leon-page */
-
 .leon-page .leon-guide {
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* Page header */
-
 .leon-page .leon-header {
   text-align: center;
   margin-bottom: 30px;
 }
-
-/* Character banner */
 
 .character-banner {
   display: block;
@@ -153,14 +125,10 @@ h2 a:hover {
   border-radius: 10px;
 }
 
-/* Subtitle */
-
 .leon-page .guide-subtitle {
   color: #aaa;
   text-align: center;
 }
-
-/* Introduction */
 
 .leon-page .leon-intro {
   margin-bottom: 40px;
@@ -175,13 +143,9 @@ h2 a:hover {
   margin-bottom: 40px;
 }
 
-/* Quick links heading */
-
 .leon-page .leon-nav h2 {
   color: #dc143c;
 }
-
-/* Link layout */
 
 .leon-page .leon-nav-links {
   display: flex;
@@ -189,8 +153,6 @@ h2 a:hover {
   flex-wrap: wrap;
   gap: 10px;
 }
-
-/* Individual links */
 
 .leon-page .leon-nav-links a {
   background-color: #252525;
@@ -201,8 +163,6 @@ h2 a:hover {
   transition: background-color 0.3s;
 }
 
-/* Link hover */
-
 .leon-page .leon-nav-links a:hover {
   background-color: #dc143c;
 }
@@ -211,16 +171,12 @@ h2 a:hover {
    6. GUIDE SECTIONS
 ========================================== */
 
-/* Main sections */
-
 .leon-page .guide-section {
   background-color: #171717;
   padding: 25px;
   margin: 0 0 35px;
   border-radius: 8px;
 }
-
-/* Section headings */
 
 .leon-page .guide-section h2 {
   color: #dc143c;
@@ -229,20 +185,14 @@ h2 a:hover {
   margin-bottom: 30px;
 }
 
-/* Individual entries */
-
 .leon-page .guide-entry {
   border-bottom: 1px solid #353535;
   padding: 15px 0;
 }
 
-/* Remove last border */
-
 .leon-page .guide-entry:last-child {
   border-bottom: none;
 }
-
-/* Entry headings */
 
 .leon-page .guide-entry h3 {
   color: white;
@@ -250,17 +200,11 @@ h2 a:hover {
   margin-bottom: 10px;
 }
 
-/* Entry paragraphs */
-
 .leon-page .guide-entry p {
   margin: 8px 0;
 }
 
-/* ==========================================
-   LOCKER CODES WITH SCREENSHOTS
-========================================== */
-
-/* Put locker text and image side by side */
+/* Locker codes with screenshots */
 
 .leon-page .locker-row {
   display: flex;
@@ -270,14 +214,10 @@ h2 a:hover {
   gap: 20px;
 }
 
-/* Allow text to fit alongside image */
-
 .leon-page .locker-row > div {
   flex: 1;
   min-width: 0;
 }
-
-/* Locker screenshots */
 
 .leon-page .locker-row img {
   display: block;
@@ -287,7 +227,8 @@ h2 a:hover {
   border-radius: 8px;
   object-fit: contain;
 }
-/* Leon's Desk - Two screenshots side by side */
+
+/* Leon's desk screenshots */
 
 .leon-page .desk-container {
   display: flex;
@@ -307,11 +248,10 @@ h2 a:hover {
   object-fit: cover;
   border-radius: 8px;
 }
+
 /* ==========================================
    7. PUZZLE SOLUTIONS
 ========================================== */
-
-/* Puzzle entries */
 
 .leon-page .puzzle-entry {
   margin-bottom: 35px;
@@ -319,14 +259,10 @@ h2 a:hover {
   border-bottom: 1px solid #353535;
 }
 
-/* Last puzzle entry */
-
 .leon-page .puzzle-entry:last-child {
   border-bottom: none;
   margin-bottom: 0;
 }
-
-/* Puzzle headings */
 
 .leon-page .puzzle-entry > h3 {
   color: white;
@@ -337,16 +273,12 @@ h2 a:hover {
    8. FIRST RUN AND SECOND RUN
 ========================================== */
 
-/* Side-by-side layout */
-
 .leon-page .run-container {
   display: flex;
   justify-content: center;
   gap: 20px;
   margin: 20px auto 30px;
 }
-
-/* Individual run boxes */
 
 .leon-page .run-box {
   flex: 1;
@@ -356,28 +288,21 @@ h2 a:hover {
   border-radius: 8px;
 }
 
-/* Run headings */
-
 .leon-page .run-box h3 {
   color: white;
   text-align: center;
   margin-top: 0;
 }
 
-/* Puzzle names */
-
 .leon-page .run-box h4 {
   color: #dc143c;
   margin-bottom: 10px;
 }
 
-/* Puzzle solutions */
-
 .leon-page .run-box p {
   color: #ccc;
   margin: 10px 0 20px;
 }
-/* Statue puzzle screenshots */
 
 .leon-page .statue-image {
   display: block;
@@ -392,8 +317,6 @@ h2 a:hover {
    9. KEYS AND KEYCARDS - MAIN SECTION
 ========================================== */
 
-/* Main keys container */
-
 .keys-guide {
   background-color: #101010;
   color: white;
@@ -404,15 +327,11 @@ h2 a:hover {
   border-radius: 16px;
 }
 
-/* Keys header */
-
 .keys-header {
   text-align: center;
   padding: 25px 0 40px;
   border-bottom: 1px solid #383838;
 }
-
-/* Main heading */
 
 .keys-header h2 {
   color: #e7194c;
@@ -420,8 +339,6 @@ h2 a:hover {
   margin: 0;
   text-transform: uppercase;
 }
-
-/* Subtitle */
 
 .keys-header p {
   color: #aaa;
@@ -433,8 +350,6 @@ h2 a:hover {
    10. KEY SECTIONS AND HEADINGS
 ========================================== */
 
-/* Section headings */
-
 .keys-section h2,
 .keycards-section h2,
 .other-keys-section h2 {
@@ -443,8 +358,6 @@ h2 a:hover {
   margin: 30px 0 18px;
   text-align: left;
 }
-
-/* Space between sections */
 
 .keycards-section,
 .other-keys-section {
@@ -455,15 +368,11 @@ h2 a:hover {
    11. KEY CARDS
 ========================================== */
 
-/* Two cards per row */
-
 .keys-container {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
 }
-
-/* Individual cards */
 
 .key-card {
   background-color: #222;
@@ -472,16 +381,12 @@ h2 a:hover {
   padding: 18px;
 }
 
-/* Key names */
-
 .key-card h3 {
   color: white;
   font-size: 20px;
   margin: 0 0 14px;
   text-align: left;
 }
-
-/* Key locations */
 
 .key-card p {
   color: #ccc;
@@ -491,20 +396,17 @@ h2 a:hover {
   text-align: left;
 }
 
-/* Key descriptions */
-
 .key-card .key-description {
   color: #999;
   font-size: 16px;
   margin-bottom: 0;
 }
 
-/* Red key icons */
-
 .key-icon {
   color: #e7194c;
   margin-right: 10px;
 }
+
 .key-images {
   display: flex;
   gap: 15px;
@@ -517,176 +419,173 @@ h2 a:hover {
   border-radius: 8px;
 }
 
-/* Future key images */
-
 .key-image {
   display: block;
   width: 100%;
-  max-width: 150px;
-  height: 120px;
+  max-width: none;
+  height: auto;
   object-fit: contain;
   margin: 15px auto;
 }
-.key-image {
-  width: 100%;
-  max-width: none;
-  height: auto;
-}
-/* ==========================================
-   12. GUIDE FOOTER
-========================================== */
-
-.leon-page .leon-footer {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 40px 0;
-}
-
-/* Footer links */
-
-.leon-page .leon-footer a {
-  color: #dc143c;
-  text-decoration: none;
-}
-
-/* Footer hover */
-
-.leon-page .leon-footer a:hover {
-  color: white;
-}
 
 /* ==========================================
-   13. TABLET AND SMALLER SCREENS
+   12. FILES AND DOCUMENTS PAGE
 ========================================== */
 
-@media (max-width: 900px) {
-  /* Homepage columns */
-
-  .characters {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    padding: 0 20px 50px;
-  }
-
-  /* Character images */
-
-  .characters img {
-    width: 100%;
-    height: 235px;
-  }
+.files-header {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px 20px;
+  text-align: center;
 }
 
-/* ==========================================
-   14. MOBILE LAYOUT
-========================================== */
-
-@media (max-width: 600px) {
-  /* Main guide */
-
-  .leon-page .leon-guide {
-    padding: 10px;
-  }
-
-  /* Guide sections */
-
-  .leon-page .guide-section {
-    padding: 15px;
-  }
-
-  /* Stack locker screenshots under codes */
-
-  .leon-page .locker-row {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  /* Locker screenshots on mobile */
-
-  .leon-page .locker-row img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* Stack puzzle boxes */
-
-  .leon-page .run-container {
-    flex-direction: column;
-  }
-
-  /* Smaller puzzle boxes */
-
-  .leon-page .run-box {
-    padding: 15px;
-  }
-
-  /* Stack key cards */
-
-  .keys-container {
-    grid-template-columns: 1fr;
-  }
-
-  /* Smaller keys heading */
-
-  .keys-header h2 {
-    font-size: 32px;
-  }
-
-  /* Smaller key cards */
-
-  .key-card {
-    padding: 15px;
-  }
-
-  /* Footer links */
-
-  .leon-page .leon-footer {
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-
-  /* One homepage column on mobile */
-
-  .characters {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    gap: 20px;
-    padding: 0 15px 40px;
-  }
-
-  /* Homepage character cards */
-
-  .character {
-    width: 100%;
-    max-width: 350px;
-  }
-
-  /* Homepage images */
-
-  .characters img {
-    width: 100%;
-    height: 235px;
-  }
+.files-header h1 {
+  color: red;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin-bottom: 15px;
 }
 
-/* ==========================================
-   15. PAGE FOOTER
-========================================== */
+.files-header p {
+  color: #ccc;
+  max-width: 750px;
+  margin: 0 auto 30px;
+  line-height: 1.7;
+}
 
-.page-footer {
+/* Files navigation */
+
+.files-nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 15px;
-  padding: 40px 20px;
+  gap: 12px;
+}
+
+.files-nav a,
+.files-footer a {
+  display: inline-block;
+  padding: 12px 18px;
+  background: #191919;
+  color: white;
+  text-decoration: none;
+  border: 1px solid #555;
+  border-radius: 5px;
+  transition: 0.2s ease;
+}
+
+.files-nav a:hover,
+.files-footer a:hover {
+  background: #8b0000;
+  border-color: red;
+}
+
+/* Files guide */
+
+.files-guide {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.files-page .guide-section {
+  margin-bottom: 55px;
+  scroll-margin-top: 20px;
+}
+
+.files-page .guide-section h2 {
+  color: #e00000;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  border-bottom: 2px solid #8b0000;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.files-page .guide-section > p {
+  color: #bbb;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+/* File cards */
+
+.file-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.file-entry {
+  background: #151515;
+  border: 1px solid #383838;
+  border-left: 4px solid #9b0000;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.file-entry h3 {
+  color: #fff;
+  font-size: 1.15rem;
+  margin: 0 0 15px;
+}
+
+.file-entry p {
+  color: #bbb;
+  line-height: 1.6;
+  margin: 8px 0;
+}
+
+.file-entry strong {
+  color: #eee;
+}
+
+/* Older files-page navigation footer */
+
+.files-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  padding: 30px 20px 50px;
+  border-top: 1px solid #333;
+}
+
+/* ==========================================
+   13. SHARED PAGE FOOTER
+========================================== */
+
+.page-footer {
+  display: block;
+  width: 100%;
+  margin-top: 40px;
+  padding: 35px 20px;
+  border-top: 1px solid #333;
+  text-align: center;
+}
+
+.page-footer .footer-brand {
+  margin: 0 auto 20px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.page-footer .footer-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 25px;
 }
 
 .page-footer a {
-  background-color: #252525;
-  color: white;
-  text-decoration: none;
+  display: inline-block;
   padding: 12px 20px;
   border-radius: 5px;
+  background-color: #252525;
+  color: #fff;
+  text-decoration: none;
   transition: background-color 0.3s;
 }
 
@@ -694,8 +593,27 @@ h2 a:hover {
   background-color: #dc143c;
 }
 
+.page-footer a:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+.page-footer p {
+  width: 100%;
+  max-width: 900px;
+  margin: 12px auto;
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.page-footer .footer-copyright {
+  margin-top: 20px;
+  font-size: 12px;
+}
+
 /* ==========================================
-   16. HOME BUTTON
+   14. HOME BUTTON
 ========================================== */
 
 .home-button,
@@ -714,7 +632,7 @@ h2 a:hover {
 }
 
 /* ==========================================
-   17. HOMEPAGE BANNER
+   15. HOMEPAGE BANNER
 ========================================== */
 
 .home-banner {
@@ -724,4 +642,125 @@ h2 a:hover {
   height: auto;
   margin: 25px auto;
   border-radius: 8px;
+}
+
+/* ==========================================
+   16. TABLET AND SMALLER SCREENS
+========================================== */
+
+@media (max-width: 900px) {
+  .characters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 0 20px 50px;
+  }
+
+  .characters img {
+    width: 100%;
+    height: 235px;
+  }
+}
+
+/* ==========================================
+   17. FILES PAGE - MOBILE LAYOUT
+========================================== */
+
+@media (max-width: 650px) {
+  .files-header {
+    padding-top: 25px;
+  }
+
+  .file-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .file-entry {
+    padding: 16px;
+  }
+
+  .files-nav a {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+  }
+
+  .files-footer a {
+    flex: 1 1 40%;
+    text-align: center;
+  }
+}
+
+/* ==========================================
+   18. MOBILE LAYOUT
+========================================== */
+
+@media (max-width: 600px) {
+  .leon-page .leon-guide {
+    padding: 10px;
+  }
+
+  .leon-page .guide-section {
+    padding: 15px;
+  }
+
+  /* Stack locker text and screenshots */
+
+  .leon-page .locker-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .leon-page .locker-row img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Stack first-run and second-run boxes */
+
+  .leon-page .run-container {
+    flex-direction: column;
+  }
+
+  .leon-page .run-box {
+    padding: 15px;
+  }
+
+  /* Stack key cards */
+
+  .keys-container {
+    grid-template-columns: 1fr;
+  }
+
+  .keys-header h2 {
+    font-size: 32px;
+  }
+
+  .key-card {
+    padding: 15px;
+  }
+
+  /* Older guide footer */
+
+  .leon-page .leon-footer {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  /* One homepage column */
+
+  .characters {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 20px;
+    padding: 0 15px 40px;
+  }
+
+  .character {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .characters img {
+    width: 100%;
+    height: 235px;
+  }
 }
