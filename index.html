@@ -1,19 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google Tag Manager -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtm.js?id=GTM-W8HF23TP"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-    </script>
-    <!-- End Google Tag Manager -->
+    
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,6 +19,7 @@
     />
 
     <link rel="stylesheet" href="style.css" />
+    <script src="consent.js" defer></script>
   </head>
 
   <body>
@@ -69,7 +58,7 @@
       <!-- Guide selection -->
       <section class="guide-selection" aria-labelledby="explore-guides">
         <h2 id="explore-guides" class="character-select">
-          Explore the guides below
+          Explore the guides
         </h2>
 
         <div class="characters">
@@ -81,6 +70,7 @@
                 alt="Leon Kennedy guide"
                 loading="lazy"
               />
+              <span class="guide-cta">View Leon’s guide <span aria-hidden="true">→</span></span>
             </a>
           </div>
 
@@ -92,6 +82,7 @@
                 alt="Claire Redfield guide"
                 loading="lazy"
               />
+              <span class="guide-cta">View Claire’s guide <span aria-hidden="true">→</span></span>
             </a>
           </div>
 
@@ -104,6 +95,7 @@
                 class="raccoon-image"
                 loading="lazy"
               />
+              <span class="guide-cta">Find Mr. Raccoon <span aria-hidden="true">→</span></span>
             </a>
           </div>
 
@@ -115,6 +107,7 @@
                 alt="Files and documents locations guide"
                 loading="lazy"
               />
+              <span class="guide-cta">View files & documents <span aria-hidden="true">→</span></span>
             </a>
           </div>
         </div>
@@ -191,6 +184,8 @@
         <a href="https://www.residentevil.com/">
           Official Resident Evil Website
         </a>
+        <a href="privacy.html">Privacy &amp; cookies</a>
+        <button type="button" class="cookie-settings" data-cookie-settings>Cookie settings</button>
       </nav>
 
       <p>
