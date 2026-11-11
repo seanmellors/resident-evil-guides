@@ -1263,7 +1263,15 @@ body:not(.leon-page):not(.claire-page):not(.files-page):not(.raccoon-page) > p {
     width: 100%;
   }
 }
-
+/* Generator Room puzzle screenshot */
+.puzzle-entry > .run-box img {
+  display: block;
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 8px;
+}
 /* Clear card actions retain the existing dark theme and artwork. */
 .character-link {
   height: 100%;
