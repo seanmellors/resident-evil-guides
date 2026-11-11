@@ -18,13 +18,10 @@
 
     <link rel="stylesheet" href="style.css" />
 
-    
     <script src="consent.js" defer></script>
   </head>
 
   <body class="leon-page">
-    
-
     <a href="index.html" class="home-button">← Home</a>
 
     <main class="leon-guide">
@@ -266,61 +263,120 @@
             </div>
           </div>
         </div>
-
-        <!-- Portable safes -->
-        <div class="puzzle-entry">
-          <h3>Portable Safes</h3>
-
-          <p>
-            Unlike lockers and standard safes, Portable Safes don't have a fixed
-            combination. The button sequence is randomised for each playthrough,
-            so you'll need to solve the puzzle yourself.
-          </p>
-
-          <p>
-            The aim is to light up all eight green indicators in order, moving
-            either clockwise or anticlockwise around the circle.
-            <strong>It doesn't matter which light you start with</strong>, as
-            long as you follow the correct order without skipping any.
-          </p>
-
-          <p>
-            Start by pressing different buttons to work out which light each one
-            controls. Make a note of the correct sequence as you go. If you make
-            a mistake, the puzzle resets, but the combination won't change.
-          </p>
-
-          <p>
-            <strong>Tip:</strong> Take your time and write down the button
-            order. Once you've worked out the sequence, you can enter it again
-            without guessing.
-          </p>
-
-          <p>
-            Each Portable Safe contains a Spare Key for the Safety Deposit Room
-            keypad. Collecting both allows you to open locker 203 and grab an
-            extra Hip Pouch.
-          </p>
-        </div>
       </section>
 
       <!-- Weapons and upgrades -->
       <section id="weapons" class="guide-section">
         <h2>Weapons &amp; upgrades</h2>
 
-        <div class="guide-entry">
+        <div class="guide-entry weapons-list">
           <h3>Weapon locations</h3>
-          <p>[Add weapons and locations]</p>
+
+          <p><strong>Matilda Handgun:</strong> Starting weapon (1st Run).</p>
+
+          <p>
+            <strong>M19 Handgun:</strong> Guardroom, Police Station B1 (2nd Run
+            only).
+          </p>
+
+          <p>
+            <strong>W-870 Shotgun:</strong> Safety Deposit Room, Police Station
+            1F.
+          </p>
+
+          <p>
+            <strong>Lightning Hawk Magnum:</strong> S.T.A.R.S. Office, Police
+            Station 2F.
+          </p>
+
+          <p>
+            <strong>Chemical Flamethrower:</strong> Supplies Storage Room, Lower
+            Sewers.
+          </p>
+
+          <p>
+            <strong>Anti-Tank Rocket Launcher:</strong> Obtained during the
+            final boss fight.
+          </p>
         </div>
 
-        <div class="guide-entry">
+        <div class="guide-entry weapons-list">
           <h3>Weapon upgrades</h3>
-          <p>[Add upgrades and locations]</p>
+
+          <p>
+            <strong>Matilda - High-Capacity Magazine:</strong> Leon's desk, West
+            Office, Police Station 1F.
+          </p>
+
+          <p>
+            <strong>Matilda - Muzzle Brake:</strong>
+            <a href="#safes">Waiting Room safe</a>, Police Station 2F.
+          </p>
+
+          <p>
+            <strong>Matilda - Gun Stock:</strong>
+            <a href="#car-key">Police car boot</a>, Parking Garage B1.
+          </p>
+
+          <p><strong>W-870 - Long Barrel:</strong> Kendo Gun Shop.</p>
+
+          <p>
+            <strong>W-870 - Shotgun Stock:</strong>
+            <a href="#safes">Treatment Pool Room safe</a>, Sewers.
+          </p>
+
+          <p>
+            <strong>Lightning Hawk - Long Barrel:</strong> Special Weapons Case,
+            Underground Stairs.
+          </p>
+
+          <p>
+            <strong>Lightning Hawk - Red Dot Sight:</strong> Wesker's desk,
+            S.T.A.R.S. Office, Police Station 2F.
+          </p>
+
+          <p>
+            <strong>Chemical Flamethrower - Regulator:</strong> Nap Room, NEST
+            Laboratory B1.
+          </p>
         </div>
 
-        <div class="guide-entry">
+        <div class="guide-entry weapons-list">
           <h3>Inventory upgrades</h3>
-          <p>[Add Hip Pouch locations]</p>
+
+          <p>
+            <strong>West Office Hip Pouch:</strong>
+            <a href="#safes">West Office safe</a>, Police Station 1F.
+          </p>
+
+          <p>
+            <strong>West Storage Room Hip Pouch:</strong> West Storage Room,
+            Police Station 3F (1st Run) or Main Hall (2nd Run).
+          </p>
+
+          <p>
+            <strong>Operator's Room Hip Pouch:</strong> Operator's Room,
+            Underground Facility.
+          </p>
+
+          <p>
+            <strong>Safety Deposit Room Hip Pouch:</strong> Locker 203, Police
+            Station 1F.
+          </p>
+
+          <p>
+            <strong>Sewers Workroom Hip Pouch:</strong> Workroom, Upper Sewers.
+          </p>
+
+          <p>
+            <strong>Laboratory Nap Room Hip Pouch:</strong> Nap Room, NEST
+            Laboratory B1.
+          </p>
+
+          <p class="weapons-note">
+            <strong>Hardcore difficulty:</strong> Only three Hip Pouches are
+            available: West Office, Safety Deposit Room and Laboratory Nap Room.
+          </p>
         </div>
       </section>
 
@@ -340,6 +396,11 @@
                 <span class="key-icon" aria-hidden="true">⚿</span> Spade Key
               </h4>
               <p>3F Stairwell</p>
+              <img src="images/spade-key.png" alt="spade-key" />
+              <img
+                src="images/spade-key-location.png"
+                alt="spade-key-location"
+              />
               <p class="key-description">Found on a desk.</p>
             </div>
 
@@ -437,7 +498,7 @@
               />
             </div>
 
-            <div class="key-card">
+            <div class="key-card" id="car-key">
               <h4>Car Key</h4>
               <p>Firing Range — Police Station B1</p>
 
@@ -456,8 +517,43 @@
             </div>
           </div>
         </section>
-      </section>
 
+        <!-- Portable safes -->
+        <div class="puzzle-entry">
+          <h3>Portable Safes</h3>
+
+          <p>
+            Unlike lockers and standard safes, Portable Safes don't have a fixed
+            combination. The button sequence is randomised for each playthrough,
+            so you'll need to solve the puzzle yourself.
+          </p>
+
+          <p>
+            The aim is to light up all eight green indicators in order, moving
+            either clockwise or anticlockwise around the circle.
+            <strong>It doesn't matter which light you start with</strong>, as
+            long as you follow the correct order without skipping any.
+          </p>
+
+          <p>
+            Start by pressing different buttons to work out which light each one
+            controls. Make a note of the correct sequence as you go. If you make
+            a mistake, the puzzle resets, but the combination won't change.
+          </p>
+
+          <p>
+            <strong>Tip:</strong> Take your time and write down the button
+            order. Once you've worked out the sequence, you can enter it again
+            without guessing.
+          </p>
+
+          <p>
+            Each Portable Safe contains a Spare Key for the Safety Deposit Room
+            keypad. Collecting both allows you to open locker 203 and grab an
+            extra Hip Pouch.
+          </p>
+        </div>
+      </section>
       <!-- Useful tips -->
       <section id="tips" class="guide-section">
         <h2>Useful tips</h2>
@@ -479,7 +575,9 @@
           Official Resident Evil Website
         </a>
         <a href="privacy.html">Privacy &amp; cookies</a>
-        <button type="button" class="cookie-settings" data-cookie-settings>Cookie settings</button>
+        <button type="button" class="cookie-settings" data-cookie-settings>
+          Cookie settings
+        </button>
       </nav>
 
       <p>
