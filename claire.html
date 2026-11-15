@@ -19,14 +19,23 @@
     />
 
     <link rel="stylesheet" href="style.css" />
-
     <script src="consent.js" defer></script>
   </head>
 
   <body class="leon-page claire-page">
-    <a href="index.html" class="home-button">← Home</a>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <main class="leon-guide">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="leon.html">Leon Guide</a>
+      <a href="claire.html" aria-current="page">Claire Guide</a>
+      <a href="safe-codes.html">Safe Codes</a>
+      <a href="locker-codes.html">Locker Codes</a>
+      <a href="mr-raccoon.html">Mr. Raccoon</a>
+      <a href="files.html">Files &amp; Documents</a>
+    </nav>
+
+    <main id="main-content" class="leon-guide">
       <!-- Page header -->
       <header class="leon-header">
         <h1>Claire Redfield guide</h1>
@@ -58,99 +67,28 @@
         <h2>Quick links</h2>
 
         <div class="leon-nav-links">
-          <a href="#safes">Safe codes</a>
-          <a href="#lockers">Locker codes</a>
           <a href="#puzzles">Puzzle solutions</a>
           <a href="#weapons">Weapons &amp; upgrades</a>
           <a href="#items">Keys &amp; keycards</a>
           <a href="#tips">Useful tips</a>
-          <a href="#leons-desk">leons-desk</a>
+          <a href="safe-codes.html">Safe codes</a>
+          <a href="locker-codes.html">Locker codes</a>
+          <a href="locker-codes.html#leons-desk">Leon's desk</a>
         </div>
       </nav>
 
-      <!-- Safe codes -->
-      <section id="safes" class="guide-section">
-        <h2>Safe codes</h2>
+      <!-- Shared codes -->
+      <section class="guide-section shared-codes">
+        <h2>Safe &amp; locker codes</h2>
 
-        <div class="guide-entry">
-          <h3>West Office Safe</h3>
-          <p><strong>Code:</strong> Left 9, Right 15, Left 7</p>
-          <p><strong>Reward:</strong> Hip Pouch</p>
-        </div>
+        <p>
+          All combinations are the same for Leon and Claire, including 1st Run
+          and 2nd Run.
+        </p>
 
-        <div class="guide-entry">
-          <h3>Waiting Room Safe</h3>
-          <p><strong>Code:</strong> Left 6, Right 2, Left 11</p>
-          <p><strong>Reward:</strong> High-Capacity Mag (JMB Hp3)</p>
-        </div>
-
-        <div class="guide-entry">
-          <h3>Treatment Pool Room Safe</h3>
-          <p><strong>Code:</strong> Left 2, Right 12, Left 8</p>
-          <p><strong>Reward:</strong> Reinforced Frame (SLS 60)</p>
-        </div>
-      </section>
-
-      <!-- Locker codes -->
-      <!-- Locker codes -->
-      <section id="lockers" class="guide-section">
-        <h2>Locker codes</h2>
-
-        <div class="guide-entry locker-row">
-          <div>
-            <h3>Shower Room Locker</h3>
-            <p><strong>Code:</strong> CAP</p>
-          </div>
-
-          <img
-            src="images/shower-room.png"
-            alt="Shower Room locker in the police station"
-            loading="lazy"
-          />
-        </div>
-
-        <div class="guide-entry locker-row">
-          <div>
-            <h3>3F Locker</h3>
-            <p><strong>Code:</strong> DCM</p>
-          </div>
-
-          <img
-            src="images/3f-locker.png"
-            alt="Third floor locker in the police station"
-            loading="lazy"
-          />
-        </div>
-
-        <div class="guide-entry">
-          <h3>Control Room Locker</h3>
-          <p><strong>Code:</strong> SZF</p>
-        </div>
-        <!-- Leon's desk -->
-        <div id="leons-desk" class="guide-entry">
-          <h3>Leon's Desk</h3>
-
-          <div class="desk-container">
-            <div class="desk-code">
-              <p><strong>Left code:</strong> NED</p>
-
-              <img
-                src="images/leon-desk-left.png"
-                alt="Leon's desk left lock combination"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="desk-code">
-              <p><strong>Right code:</strong> MRG</p>
-
-              <img
-                src="images/leon-desk-right.png"
-                alt="Leon's desk right lock combination"
-                loading="lazy"
-              />
-            </div>
-          </div>
+        <div class="shared-codes-links">
+          <a href="safe-codes.html">View safe codes </a>
+          <a href="locker-codes.html">View locker codes </a>
         </div>
       </section>
 
@@ -221,12 +159,12 @@
           <div class="run-container">
             <div class="run-box">
               <h4>1st Run</h4>
-              <p>[Add solution]</p>
+              <p class="content-pending">Solution pending verification.</p>
             </div>
 
             <div class="run-box">
               <h4>2nd Run</h4>
-              <p>[Add solution]</p>
+              <p class="content-pending">Solution pending verification.</p>
             </div>
           </div>
         </div>
@@ -234,7 +172,7 @@
         <!-- Orphanage puzzle -->
         <div class="puzzle-entry">
           <h3>Orphanage Puzzle</h3>
-          <p>[Add Sherry's puzzle solution]</p>
+          <p class="content-pending">Solution pending verification.</p>
         </div>
 
         <!-- Greenhouse puzzle -->
@@ -244,320 +182,307 @@
           <div class="run-container">
             <div class="run-box">
               <h4>1st Run</h4>
-              <p>[Add solution]</p>
+              <p class="content-pending">Solution pending verification.</p>
             </div>
 
             <div class="run-box">
               <h4>2nd Run</h4>
-              <p>[Add solution]</p>
+              <p class="content-pending">Solution pending verification.</p>
             </div>
           </div>
         </div>
+      </section>
 
-        <!-- Weapons and upgrades -->
-        <section id="weapons" class="guide-section">
-          <h2>Weapons &amp; upgrades</h2>
+      <!-- Weapons and upgrades -->
+      <section id="weapons" class="guide-section">
+        <h2>Weapons &amp; upgrades</h2>
 
-          <div class="guide-entry weapons-list">
-            <h3>Weapon locations</h3>
-
-            <p>
-              <strong>SLS 60 Handgun:</strong>
-              Starting weapon (1st Run).
-            </p>
-
-            <p>
-              <strong>Quickdraw Army Revolver:</strong>
-              Guardroom, Police Station B1 (2nd Run only).
-            </p>
-
-            <p>
-              <strong>GM 79 Grenade Launcher:</strong>
-              Safety Deposit Room, Police Station 1F.
-            </p>
-
-            <p>
-              <strong>JMB Hp3 Handgun:</strong>
-              <a href="#car-key">Police car boot</a>, Parking Garage B1.
-            </p>
-
-            <p>
-              <strong>MQ 11 Submachine Gun:</strong>
-              S.T.A.R.S. Office, Police Station 2F.
-            </p>
-
-            <p>
-              <strong>Spark Shot:</strong>
-              Supplies Storage Room, Lower Sewers.
-            </p>
-
-            <p>
-              <strong>Minigun:</strong>
-              Turntable, during the final section of Claire's campaign.
-            </p>
-          </div>
-
-          <div class="guide-entry weapons-list">
-            <h3>Weapon upgrades</h3>
-
-            <p>
-              <strong>SLS 60 - Speed Loader:</strong>
-              <a href="#leons-desk">Leon's desk</a>, West Office, Police Station
-              1F.
-            </p>
-
-            <p>
-              <strong>SLS 60 - Reinforced Frame:</strong>
-              <a href="#safes">Treatment Pool Room safe</a>, Sewers.
-            </p>
-
-            <p>
-              <strong>JMB Hp3 - High-Capacity Magazine:</strong>
-              <a href="#safes">Waiting Room safe</a>, Police Station 2F.
-            </p>
-
-            <p>
-              <strong>GM 79 - Shoulder Stock:</strong>
-              Elevator Controls Room, Police Station B1.
-            </p>
-
-            <p>
-              <strong>MQ 11 - High-Capacity Magazine:</strong>
-              Wesker's desk, S.T.A.R.S. Office, Police Station 2F.
-            </p>
-
-            <p>
-              <strong>MQ 11 - Suppressor:</strong>
-              Special Weapons Case, Underground Stairs.
-            </p>
-
-            <p>
-              <strong>Spark Shot - High Voltage Condenser:</strong>
-              Nap Room, NEST Laboratory B1.
-            </p>
-          </div>
-
-          <div class="guide-entry weapons-list">
-            <h3>Inventory upgrades</h3>
-
-            <p>
-              <strong>West Office Hip Pouch:</strong>
-              <a href="#safes">West Office safe</a>, Police Station 1F.
-            </p>
-
-            <p>
-              <strong>West Storage Room Hip Pouch:</strong>
-              West Storage Room, Police Station 3F (1st Run) or Main Hall (2nd
-              Run).
-            </p>
-
-            <p>
-              <strong>Operator's Room Hip Pouch:</strong>
-              Operator's Room, Underground Facility.
-            </p>
-
-            <p>
-              <strong>Safety Deposit Room Hip Pouch:</strong>
-              Locker 203, Police Station 1F.
-            </p>
-
-            <p>
-              <strong>Sewers Workroom Hip Pouch:</strong>
-              Workroom, Upper Sewers.
-            </p>
-
-            <p>
-              <strong>Laboratory Nap Room Hip Pouch:</strong>
-              Nap Room, NEST Laboratory B1.
-            </p>
-
-            <p class="weapons-note">
-              <strong>Hardcore difficulty:</strong>
-              Only three Hip Pouches are available: West Office, Safety Deposit
-              Room and Laboratory Nap Room.
-            </p>
-          </div>
-        </section>
-
-        <!-- Keys and keycards -->
-        <section id="items" class="keys-guide">
-          <header class="keys-header">
-            <h2>Keys &amp; keycards</h2>
-          </header>
-
-          <!-- Important keys -->
-          <section class="keys-section">
-            <h3>Important keys</h3>
-
-            <div class="keys-container">
-              <div class="key-card">
-                <h4>
-                  <span class="key-icon" aria-hidden="true">⚿</span> Spade Key
-                </h4>
-                <p>3F Stairwell</p>
-                <p class="key-description">
-                  Found on a desk. Opens Spade doors throughout the Police
-                  Station.
-                </p>
-              </div>
-
-              <div class="key-card">
-                <h4>
-                  <span class="key-icon" aria-hidden="true">⚿</span> Diamond Key
-                </h4>
-                <p>Morgue — Police Station B1</p>
-                <p class="key-description">
-                  Found inside a body drawer. Opens Diamond doors.
-                </p>
-              </div>
-
-              <div class="key-card">
-                <h4>
-                  <span class="key-icon" aria-hidden="true">⚿</span> Heart Key
-                </h4>
-                <p>Chief's Office — Private Collection Room</p>
-                <p class="key-description">
-                  Examine the Relief Portrait to obtain the Heart Key. Exclusive
-                  to Claire.
-                </p>
-              </div>
-
-              <div class="key-card">
-                <h4>
-                  <span class="key-icon" aria-hidden="true">⚿</span> Sewer Key
-                </h4>
-                <p>Bottom Waterway — Sewers</p>
-                <p class="key-description">
-                  Found near the Bottom Waterway. Opens locked rooms in the
-                  Sewers.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          <!-- Keycards -->
-          <section class="keycards-section">
-            <h3>Keycards</h3>
-
-            <div class="key-card">
-              <h4>Weapons Locker Key Card</h4>
-              <p>Art Room — 2F Police Station</p>
-
-              <p class="key-description">
-                Unlocks the weapons locker in the Safety Deposit Room,
-                containing Claire's GM 79 Grenade Launcher.
-              </p>
-
-              <div class="key-images">
-                <img
-                  src="images/weapon-locker-card.png"
-                  alt="Weapons Locker Key Card"
-                  loading="lazy"
-                />
-
-                <img
-                  src="images/weapon-locker.png"
-                  alt="Weapons Locker in the Safety Deposit Room"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-
-            <div class="key-card">
-              <h4>Parking Garage Key Card</h4>
-              <p>Chief's Office — Private Collection Room</p>
-
-              <p class="key-description">
-                Obtained after completing the electronic door panel puzzle.
-                Unlocks the Parking Garage exit.
-              </p>
-            </div>
-          </section>
-
-          <!-- Other keys -->
-          <section class="other-keys-section">
-            <h3>Other keys</h3>
-
-            <div class="keys-container">
-              <div class="key-card">
-                <h4>S.T.A.R.S. Badge / USB Key</h4>
-                <p>Bejeweled Box</p>
-
-                <p class="key-description">
-                  Combine the Red Jewel with the Bejeweled Box to obtain the
-                  badge. Examine it to reveal the USB connector. Used to unlock
-                  the S.T.A.R.S. Armory.
-                </p>
-              </div>
-
-              <div class="key-card">
-                <h4>Gas Station Key</h4>
-                <p>Gas Station — Opening Section</p>
-
-                <p class="key-description">
-                  Found in the back storage area. Unlocks the exit door.
-                </p>
-              </div>
-
-              <div class="key-card" id="car-key">
-                <h4>Car Key</h4>
-                <p>Firing Range — Police Station B1</p>
-
-                <p class="key-description">
-                  Found inside a tin box. Examine the key and press its button
-                  to unlock a police car boot in the Parking Garage, containing
-                  Claire's JMB Hp3 handgun.
-                </p>
-
-                <img
-                  src="images/car-trunk.png"
-                  alt="Police car boot in the Parking Garage"
-                  class="key-image"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-          </section>
-        </section>
-        <!-- Portable safes -->
-        <div class="puzzle-entry">
-          <h3>Portable Safes</h3>
+        <!-- Weapon locations -->
+        <div class="guide-entry weapons-list">
+          <h3>Weapon locations</h3>
 
           <p>
-            Unlike lockers and standard safes, Portable Safes don't have a fixed
-            combination. The button sequence is randomised for each playthrough,
-            so you'll need to solve the puzzle yourself.
+            <strong>SLS 60 Handgun:</strong>
+            Starting weapon (1st Run).
           </p>
 
           <p>
-            The aim is to light up all eight green indicators in order, moving
-            either clockwise or anticlockwise around the circle.
-            <strong>It doesn't matter which light you start with</strong>, as
-            long as you follow the correct order without skipping any.
+            <strong>Quickdraw Army Revolver:</strong>
+            Guardroom, Police Station B1 (2nd Run only).
           </p>
 
           <p>
-            Start by pressing different buttons to work out which light each one
-            controls. Make a note of the correct sequence as you go. If you make
-            a mistake, the puzzle resets, but the combination won't change.
+            <strong>GM 79 Grenade Launcher:</strong>
+            Safety Deposit Room, Police Station 1F.
           </p>
 
           <p>
-            <strong>Tip:</strong> Take your time and write down the button
-            order. Once you've worked out the sequence, you can enter it again
-            without guessing.
+            <strong>JMB Hp3 Handgun:</strong>
+            <a href="#car-key">Police car boot</a>, Parking Garage B1.
           </p>
 
           <p>
-            Each Portable Safe contains a Spare Key for the Safety Deposit Room
-            keypad. Collecting both allows you to open locker 203 and grab an
-            extra Hip Pouch.
+            <strong>MQ 11 Submachine Gun:</strong>
+            S.T.A.R.S. Office, Police Station 2F.
+          </p>
+
+          <p>
+            <strong>Spark Shot:</strong>
+            Supplies Storage Room, Lower Sewers.
+          </p>
+
+          <p>
+            <strong>Minigun:</strong>
+            Turntable, during the final section of Claire's campaign.
+          </p>
+        </div>
+
+        <!-- Weapon upgrades -->
+        <div class="guide-entry weapons-list">
+          <h3>Weapon upgrades</h3>
+
+          <p>
+            <strong>SLS 60 - Speed Loader:</strong>
+            <a href="locker-codes.html#leons-desk">Leon's desk</a>, West Office,
+            Police Station 1F.
+          </p>
+
+          <p>
+            <strong>SLS 60 - Reinforced Frame:</strong>
+            <a href="safe-codes.html">Treatment Pool Room safe</a>, Sewers.
+          </p>
+
+          <p>
+            <strong>JMB Hp3 - High-Capacity Magazine:</strong>
+            <a href="safe-codes.html">Waiting Room safe</a>, Police Station 2F.
+          </p>
+
+          <p>
+            <strong>GM 79 - Shoulder Stock:</strong>
+            Elevator Controls Room, Police Station B1.
+          </p>
+
+          <p>
+            <strong>MQ 11 - High-Capacity Magazine:</strong>
+            Wesker's desk, S.T.A.R.S. Office, Police Station 2F.
+          </p>
+
+          <p>
+            <strong>MQ 11 - Suppressor:</strong>
+            Special Weapons Case, Underground Stairs.
+          </p>
+
+          <p>
+            <strong>Spark Shot - High Voltage Condenser:</strong>
+            Nap Room, NEST Laboratory B1.
+          </p>
+        </div>
+
+        <!-- Inventory upgrades -->
+        <div class="guide-entry weapons-list">
+          <h3>Inventory upgrades</h3>
+
+          <p>
+            <strong>West Office Hip Pouch:</strong>
+            <a href="safe-codes.html">West Office safe</a>, Police Station 1F.
+          </p>
+
+          <p>
+            <strong>West Storage Room Hip Pouch:</strong>
+            West Storage Room, Police Station 3F (1st Run) or Main Hall (2nd
+            Run).
+          </p>
+
+          <p>
+            <strong>Operator's Room Hip Pouch:</strong>
+            Operator's Room, Underground Facility.
+          </p>
+
+          <p>
+            <strong>Safety Deposit Room Hip Pouch:</strong>
+            Locker 203, Police Station 1F.
+          </p>
+
+          <p>
+            <strong>Sewers Workroom Hip Pouch:</strong>
+            Workroom, Upper Sewers.
+          </p>
+
+          <p>
+            <strong>Laboratory Nap Room Hip Pouch:</strong>
+            Nap Room, NEST Laboratory B1.
+          </p>
+
+          <p class="weapons-note">
+            <strong>Hardcore difficulty:</strong>
+            Only three Hip Pouches are available: West Office, Safety Deposit
+            Room and Laboratory Nap Room.
           </p>
         </div>
       </section>
+
+      <!-- Keys and keycards -->
+      <section id="items" class="keys-guide">
+        <header class="keys-header">
+          <h2>Keys &amp; keycards</h2>
+        </header>
+
+        <!-- Important keys -->
+        <section class="keys-section">
+          <h3>Important keys</h3>
+
+          <div class="keys-container">
+            <div class="key-card">
+              <h4>
+                <span class="key-icon" aria-hidden="true">⚿</span>
+                Spade Key
+              </h4>
+
+              <p>3F Stairwell</p>
+
+              <p class="key-description">
+                Found on a desk. Opens Spade doors throughout the Police
+                Station.
+              </p>
+            </div>
+
+            <div class="key-card">
+              <h4>
+                <span class="key-icon" aria-hidden="true">⚿</span>
+                Diamond Key
+              </h4>
+
+              <p>Morgue — Police Station B1</p>
+
+              <p class="key-description">
+                Found inside a body drawer. Opens Diamond doors.
+              </p>
+            </div>
+
+            <div class="key-card">
+              <h4>
+                <span class="key-icon" aria-hidden="true">⚿</span>
+                Heart Key
+              </h4>
+
+              <p>Chief's Office — Private Collection Room</p>
+
+              <p class="key-description">
+                Examine the Relief Portrait to obtain the Heart Key. Exclusive
+                to Claire.
+              </p>
+            </div>
+
+            <div class="key-card">
+              <h4>
+                <span class="key-icon" aria-hidden="true">⚿</span>
+                Sewer Key
+              </h4>
+
+              <p>Bottom Waterway — Sewers</p>
+
+              <p class="key-description">
+                Found near the Bottom Waterway. Opens locked rooms in the
+                Sewers.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Keycards -->
+        <section class="keycards-section">
+          <h3>Keycards</h3>
+
+          <div class="key-card">
+            <h4>Weapons Locker Key Card</h4>
+
+            <p>Art Room — 2F Police Station</p>
+
+            <p class="key-description">
+              Unlocks the weapons locker in the Safety Deposit Room, containing
+              Claire's GM 79 Grenade Launcher.
+            </p>
+
+            <div class="key-images">
+              <img
+                src="images/weapon-locker-card.png"
+                alt="Weapons Locker Key Card"
+                loading="lazy"
+              />
+
+              <img
+                src="images/weapon-locker.png"
+                alt="Weapons Locker in the Safety Deposit Room"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="key-card">
+            <h4>Parking Garage Key Card</h4>
+
+            <p>Chief's Office — Private Collection Room</p>
+
+            <p class="key-description">
+              Obtained after completing the electronic door panel puzzle.
+              Unlocks the Parking Garage exit.
+            </p>
+          </div>
+        </section>
+
+        <!-- Other keys -->
+        <section class="other-keys-section">
+          <h3>Other keys</h3>
+
+          <div class="keys-container">
+            <div class="key-card">
+              <h4>S.T.A.R.S. Badge / USB Key</h4>
+
+              <p>Bejeweled Box</p>
+
+              <p class="key-description">
+                Combine the Red Jewel with the Bejeweled Box to obtain the
+                badge. Examine it to reveal the USB connector. Used to unlock
+                the S.T.A.R.S. Armory.
+              </p>
+            </div>
+
+            <div class="key-card">
+              <h4>Gas Station Key</h4>
+
+              <p>Gas Station — Opening Section</p>
+
+              <p class="key-description">
+                Found in the back storage area. Unlocks the exit door.
+              </p>
+            </div>
+
+            <div class="key-card" id="car-key">
+              <h4>Car Key</h4>
+
+              <p>Firing Range — Police Station B1</p>
+
+              <p class="key-description">
+                Found inside a tin box. Examine the key and press its button to
+                unlock a police car boot in the Parking Garage, containing
+                Claire's JMB Hp3 handgun.
+              </p>
+
+              <img
+                src="images/car-trunk.png"
+                alt="Police car boot in the Parking Garage"
+                class="key-image"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </section>
+      </section>
+
       <!-- Useful tips -->
       <section id="tips" class="guide-section">
         <h2>Useful tips</h2>
+
         <p>More tips for Claire's campaign will be added here.</p>
       </section>
     </main>
@@ -567,6 +492,8 @@
       <p class="footer-brand">Created by Birdie &amp; Sheep Web Development</p>
 
       <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="safe-codes.html">Safe Codes</a>
+        <a href="locker-codes.html">Locker Codes</a>
         <a href="index.html">Home</a>
         <a href="leon.html">Leon Guide</a>
         <a href="claire.html" aria-current="page">Claire Guide</a>
@@ -576,6 +503,7 @@
           Official Resident Evil Website
         </a>
         <a href="privacy.html">Privacy &amp; cookies</a>
+
         <button type="button" class="cookie-settings" data-cookie-settings>
           Cookie settings
         </button>

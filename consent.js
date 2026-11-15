@@ -33,10 +33,10 @@
   }
   function apply(allowed) {
     window['ga-disable-' + ID] = !allowed;
-    if (!allowed) { clearAnalyticsCookies(); return; }
+    if (!allowed) { gtag('consent','update',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'}); clearAnalyticsCookies(); return; }
+    gtag('consent','update',{analytics_storage:'granted',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
     if (loaded) return;
     loaded = true;
-    gtag('consent','update',{analytics_storage:'granted',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
     gtag('js',new Date());
     gtag('config',ID,{allow_google_signals:false,allow_ad_personalization_signals:false,cookie_expires:15552000,cookie_update:false});
     const script = document.createElement('script');

@@ -1,0 +1,10 @@
+Unreferenced: download.png
+Exact duplicate: leon-banner.png = download.png
+Unreferenced: leon-desk-right.png~RF75cc0cca.TMP
+Unreferenced: leon-desk-right.png~RF75cc8dc2.TMP
+Unreferenced: lion-statue-a.png~RF75de2ee1.TMP
+Unreferenced: maiden-statue-a.png~RF75ddde41.TMP
+Unreferenced: spade-key-location.png~RF7f1b42c8.TMP
+Unreferenced: spade-key.png~RF7f1abf5f.TMP
+Unreferenced: unicorn-statue-a.png~RF75dbf685.TMP
+Unreferenced normal images retained except the exact duplicate download.png; temporary editor backups removed.
