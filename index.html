@@ -1,8 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-    
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -22,13 +20,17 @@
     <script src="consent.js" defer></script>
   </head>
 
-  <body><a class="skip-link" href="#main-content">Skip to content</a><nav class="site-nav" aria-label="Main navigation"><a href="index.html" aria-current="page">Home</a>
-<a href="leon.html">Leon Guide</a>
-<a href="claire.html">Claire Guide</a>
-<a href="safe-codes.html">Safe Codes</a>
-<a href="locker-codes.html">Locker Codes</a>
-<a href="mr-raccoon.html">Mr. Raccoon</a>
-<a href="files.html">Files &amp; Documents</a></nav>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="leon.html">Leon Guide</a>
+      <a href="claire.html">Claire Guide</a>
+      <a href="safe-codes.html">Safe Codes</a>
+      <a href="locker-codes.html">Locker Codes</a>
+      <a href="mr-raccoon.html">Mr. Raccoon</a>
+      <a href="files.html">Files &amp; Documents</a>
+    </nav>
     <main id="main-content">
       <!-- Homepage introduction -->
       <header class="home-header">
@@ -61,12 +63,31 @@
         </p>
       </header>
 
-      <nav class="leon-nav" aria-label="Quick code lookup"><h2>Locker codes and safe codes</h2><div class="leon-nav-links"><a href="safe-codes.html">Safe codes — Leon &amp; Claire</a><a href="locker-codes.html">Locker codes &amp; Leon’s desk</a></div></nav>
-<!-- Guide selection -->
+      <!-- Safe and locker codes -->
+      <section class="code-selection">
+        <h2>Safe &amp; locker codes</h2>
+
+        <div class="code-grid">
+          <a href="safe-codes.html" class="code-card">
+            <span class="code-icon" aria-hidden="true">🔒</span>
+            <h3>Safe codes</h3>
+            <p>All safe combinations</p>
+            <span class="code-cta">View codes &rarr;</span>
+          </a>
+
+          <a href="locker-codes.html" class="code-card">
+            <span class="code-icon" aria-hidden="true">🔑</span>
+            <h3>Locker codes</h3>
+            <p>Lockers &amp; Leon's desk</p>
+            <span class="code-cta">View codes &rarr;</span>
+          </a>
+        </div>
+
+        <p class="code-note">For Leon and Claire — 1st &amp; 2nd Run</p>
+      </section>
+      <!-- Guide selection -->
       <section class="guide-selection" aria-labelledby="explore-guides">
-        <h2 id="explore-guides" class="character-select">
-          Explore the guides
-        </h2>
+        <h2 id="explore-guides" class="character-select">Explore the guides</h2>
 
         <div class="characters">
           <div class="character">
@@ -77,7 +98,9 @@
                 alt="Leon Kennedy guide"
                 loading="lazy"
               />
-              <span class="guide-cta">View Leon’s guide <span aria-hidden="true">→</span></span>
+              <span class="guide-cta"
+                >View Leon’s guide <span aria-hidden="true">→</span></span
+              >
             </a>
           </div>
 
@@ -89,7 +112,9 @@
                 alt="Claire Redfield guide"
                 loading="lazy"
               />
-              <span class="guide-cta">View Claire’s guide <span aria-hidden="true">→</span></span>
+              <span class="guide-cta"
+                >View Claire’s guide <span aria-hidden="true">→</span></span
+              >
             </a>
           </div>
 
@@ -102,7 +127,9 @@
                 class="raccoon-image"
                 loading="lazy"
               />
-              <span class="guide-cta">Find Mr. Raccoon <span aria-hidden="true">→</span></span>
+              <span class="guide-cta"
+                >Find Mr. Raccoon <span aria-hidden="true">→</span></span
+              >
             </a>
           </div>
 
@@ -114,7 +141,9 @@
                 alt="Files and documents locations guide"
                 loading="lazy"
               />
-              <span class="guide-cta">View files & documents <span aria-hidden="true">→</span></span>
+              <span class="guide-cta"
+                >View files & documents <span aria-hidden="true">→</span></span
+              >
             </a>
           </div>
         </div>
@@ -155,7 +184,9 @@
           <p>
             I'll be including solutions for the statue medallion puzzles,
             electronic door panels, chess plug puzzle and greenhouse control
-            room, along with <a href="safe-codes.html">safe combinations</a> and <a href="locker-codes.html">locker codes</a>. Some puzzle solutions are still awaiting verification.
+            room, along with <a href="safe-codes.html">safe combinations</a> and
+            <a href="locker-codes.html">locker codes</a>. Some puzzle solutions
+            are still awaiting verification.
           </p>
         </section>
 
@@ -183,7 +214,8 @@
       <p class="footer-brand">Created by Birdie &amp; Sheep Web Development</p>
 
       <nav class="footer-nav" aria-label="Footer navigation">
-<a href="safe-codes.html">Safe Codes</a><a href="locker-codes.html">Locker Codes</a>
+        <a href="safe-codes.html">Safe Codes</a
+        ><a href="locker-codes.html">Locker Codes</a>
         <a href="index.html" aria-current="page">Home</a>
         <a href="leon.html">Leon Guide</a>
         <a href="claire.html">Claire Guide</a>
@@ -193,7 +225,9 @@
           Official Resident Evil Website
         </a>
         <a href="privacy.html">Privacy &amp; cookies</a>
-        <button type="button" class="cookie-settings" data-cookie-settings>Cookie settings</button>
+        <button type="button" class="cookie-settings" data-cookie-settings>
+          Cookie settings
+        </button>
       </nav>
 
       <p>

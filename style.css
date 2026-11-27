@@ -1223,7 +1223,118 @@ body:not(.leon-page):not(.claire-page):not(.files-page):not(.raccoon-page) > p {
     width: 100%;
   }
 }
+/* ==========================================
+   HOMEPAGE SAFE AND LOCKER CODE CARDS
+========================================== */
 
+.code-selection {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 25px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.code-selection h2 {
+  margin: 0 0 25px;
+  color: var(--red);
+}
+
+.code-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.code-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 15px;
+  background: var(--surface-light);
+  border: 1px solid var(--red);
+  border-radius: 10px;
+  color: var(--text);
+  text-decoration: none;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.code-card:hover {
+  transform: translateY(-5px);
+  background: #301419;
+  box-shadow: 0 5px 20px rgb(227 27 54 / 20%);
+}
+
+.code-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.code-card h3 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 0.7px;
+}
+
+.code-card p {
+  margin: 8px 0 15px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.code-cta {
+  margin-top: auto;
+  color: var(--red);
+  font-weight: 700;
+}
+
+.code-note {
+  margin: 20px 0 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* Mobile layout */
+
+@media (max-width: 600px) {
+  .code-selection {
+    padding: 20px 12px;
+    margin: 30px auto;
+  }
+
+  .code-grid {
+    gap: 10px;
+  }
+
+  .code-card {
+    padding: 20px 8px;
+  }
+
+  .code-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .code-card p {
+    font-size: 0.8rem;
+  }
+
+  .code-icon {
+    font-size: 1.7rem;
+  }
+
+  .code-cta {
+    font-size: 0.9rem;
+  }
+}
 /* ==========================================
 
    16. MOBILE LAYOUT
@@ -2011,8 +2122,23 @@ button:focus-visible {
 
 /* Full-width code screenshots on mobile */
 @media (max-width: 768px) {
-  .locker-row img { width: 100%; max-width: 100%; height: auto; max-height: none; object-fit: contain; }
+  .locker-row img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+  }
 }
 
-.circuit-grid { border-collapse: collapse; margin: 12px auto; }
-.circuit-grid td { border: 1px solid var(--border); padding: 8px 14px; text-align: center; color: var(--text); background: var(--surface); }
+.circuit-grid {
+  border-collapse: collapse;
+  margin: 12px auto;
+}
+.circuit-grid td {
+  border: 1px solid var(--border);
+  padding: 8px 14px;
+  text-align: center;
+  color: var(--text);
+  background: var(--surface);
+}
