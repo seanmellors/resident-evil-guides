@@ -2008,3 +2008,11 @@ button:focus-visible {
     min-height: 44px;
   }
 }
+
+/* Full-width code screenshots on mobile */
+@media (max-width: 768px) {
+  .locker-row img { width: 100%; max-width: 100%; height: auto; max-height: none; object-fit: contain; }
+}
+
+.circuit-grid { border-collapse: collapse; margin: 12px auto; }
+.circuit-grid td { border: 1px solid var(--border); padding: 8px 14px; text-align: center; color: var(--text); background: var(--surface); }
